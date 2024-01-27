@@ -1,3 +1,2 @@
-Greetings! FMessage is a CLI messaging tool that doesnt require a server. just type "?" for the help page!
-
-Now for the purpose of this tool, it doesnt have any!
+FMessage is an IRC project to cure my boredom or to maintain my programming knowledge.
+The encryption is done on the client side and the server just passes the ciphered text to the targetted client.
