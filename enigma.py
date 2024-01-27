@@ -15,30 +15,29 @@ import string
 
 alphabet = string.ascii_lowercase
 
-class encryption:
-    def encrypt(plain_text, shift):
-        int(shift)
-        if shift > 25:
-            shift = 25
-        elif shift < 1:
-            shift = 1
+def encrypt(plain_text, shift):
+    int(shift)
+    if shift > 25:
+        shift = 25
+    elif shift < 1:
+        shift = 1
 
-        shifted = alphabet[shift:] + alphabet[:shift]
-        table = str.maketrans(alphabet, shifted)
-        encrypted = plain_text.translate(table)
-        return encrypted
+    shifted = alphabet[shift:] + alphabet[:shift]
+    table = str.maketrans(alphabet, shifted)
+    encrypted = plain_text.translate(table)
+    return encrypted
 
-    def decrypt(text, shift):
-        int(shift)
-        if shift > 25:
-            shift = 25
-        elif shift < 1:
-            shift = 1
-        shift = 26-shift
-        shift %= 26
+def decrypt(text, shift):
+    int(shift)
+    if shift > 25:
+        shift = 25
+    elif shift < 1:
+        shift = 1
+    shift = 26-shift
+    shift %= 26
 
-        shifted = alphabet[shift:] + alphabet[:shift]
-        table = str.maketrans(alphabet, shifted)
-        encrypted = text.translate(table)
-        return encrypted
+    shifted = alphabet[shift:] + alphabet[:shift]
+    table = str.maketrans(alphabet, shifted)
+    encrypted = text.translate(table)
+    return encrypted
 
